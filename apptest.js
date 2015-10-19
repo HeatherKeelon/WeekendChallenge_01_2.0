@@ -43,17 +43,17 @@ function addSalary(array){
 //This is what appears on the DOM
 function appendDom(employee){
 	//console.log(employee);
-	$('#employeeform').append('<div class="employees"</div>')//This whole div is going to hold only one person. So, if you want to do the data-id thing, you should probably put it here. You will also want to loop through the array containing employees, and splice out salary
+	$('#employeeform').append('<div class="employees col-md-3"</div>')//This whole div is going to hold only one person. So, if you want to do the data-id thing, you should probably put it here. You will also want to loop through the array containing employees, and splice out salary
 	var $el = $('#employeeform').children().last();
 	$el.data("counter", counter);
 	employee.counter=$el.data("counter");
 
 	$el.append("<br>");
-	$el.append($("<tr></tr>").text(employee.employeename));
-	$el.append("<span>" + employee.employeenumber + "&nbsp</span>");
-	$el.append("<span>" + employee.jobtitle + "&nbsp</span>");
-	$el.append("<span>" + employee.salary + "</span>");
-	$el.append("<button class='delete' data-id='"+employee.employeenumber+"'>Delete</button>");		
+	$el.append("<p>" + "Employee Name: " + employee.employeename + "</p>");
+	$el.append("<p>" + "Employee Number: " + employee.employeenumber + "&nbsp</p>");
+	$el.append("<p>" + "Title: " + employee.jobtitle + "&nbsp</p>");
+	$el.append("<p>" + "Salary: " + employee.salary + "</p>");
+	$el.append("<button class='delete btn btn-danger' data-id='"+employee.employeenumber+"'>Delete</button>");		
 }
 
 //Code for what happens when the delete button is pressed.
