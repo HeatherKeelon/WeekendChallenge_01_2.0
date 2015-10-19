@@ -43,8 +43,8 @@ function addSalary(array){
 //This is what appears on the DOM
 function appendDom(employee){
 	//console.log(employee);
-	$('#employeeform').append('<div class="employees col-md-3"</div>')//This whole div is going to hold only one person. So, if you want to do the data-id thing, you should probably put it here. You will also want to loop through the array containing employees, and splice out salary
-	var $el = $('#employeeform').children().last();
+	$('#employeestore').append('<div class="employees col-md-3"</div>')//This whole div is going to hold only one person. So, if you want to do the data-id thing, you should probably put it here. You will also want to loop through the array containing employees, and splice out salary
+	var $el = $('#employeestore').children().last();
 	$el.data("counter", counter);
 	employee.counter=$el.data("counter");
 
@@ -57,7 +57,7 @@ function appendDom(employee){
 }
 
 //Code for what happens when the delete button is pressed.
-	$('#employeeform').on('click', '.delete', function(){ 
+	$('#employeestore').on('click', '.delete', function(){ 
 		console.log("PRE: ", totalSalary);
 		var $el = $(this).parent();
 		var deleteemployee =  $el.data("counter");

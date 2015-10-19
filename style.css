@@ -2,17 +2,9 @@ body {
 	border: 0;
 	padding:; 0;
 	margin: 0;
-	background-color: #009900;
+	font-family: "Trade Gothic", sans-serif ;
 }
 
-main {
-	background-color: #FFFFFF;
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	border-radius: 10px;
-}
 
 header {
 	text-align: center;
@@ -24,9 +16,14 @@ span {
 	
 }
 
+h1, h3 {
+	font-family: "Franklin Gothic", serif;
+}
+
 #form {
 	text-align: center;
 	margin-top: 40px;
+	margin-left: 20px;
 }
 
 #salarytotal {
@@ -38,6 +35,10 @@ span {
 .input-group {
 	margin-top: 10px;
 	width: 75%;
+}
+
+.wrapper {
+	background-color: white;
 }
 
 
